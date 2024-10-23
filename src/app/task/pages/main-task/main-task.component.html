@@ -1,0 +1,49 @@
+<!-- Navbar de la app -->
+<app-navbar></app-navbar><br />
+<div class="container">
+  <h2>¿Qué desea reservar?</h2>
+  <br />
+  <!-- Cards de seleccion (menú) -->
+  <div class="row">
+    <div class="card" style="width: 18rem">
+      <img src="assets/teatro.jpg" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">Teatros</h5>
+        <p class="card-text">
+          Teatros disponibles en la ciudad de Guadalajara.
+        </p>
+      </div>
+      <div class="card-footer">
+        <a routerLink="/teatros/" class="btn btn-primary" style="width: 100%"
+          >Ver teatros disponibles <i class="fa fa-eye" style="margin: 3px"></i
+        ></a>
+      </div>
+    </div>
+    <div class="card" style="width: 18rem">
+      <img src="assets/cine.jpg" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">Cines</h5>
+        <p class="card-text">Cines disponibles en la ciudad de Guadalajara.</p>
+      </div>
+      <div class="card-footer">
+        <a routerLink="/cines/" class="btn btn-primary" style="width: 100%"
+          >Ver cines disponibles <i class="fa fa-eye" style="margin: 3px"></i
+        ></a>
+      </div>
+    </div>
+    <div class="card" style="width: 18rem">
+      <img src="assets/museo.jpg" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">Museos</h5>
+        <p class="card-text">Museos disponibles en la ciudad de Guadalajara.</p>
+      </div>
+      <div class="card-footer">
+        <a routerLink="/museos/" class="btn btn-primary" style="width: 100%"
+          >Ver museos disponibles <i class="fa fa-eye" style="margin: 3px"></i
+        ></a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Footer de la app -->
+<app-footer></app-footer>

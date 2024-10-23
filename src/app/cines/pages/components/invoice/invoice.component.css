@@ -1,0 +1,9 @@
+@media print {
+  body {
+    transform: scale(2.5);
+    transform-origin: top left;
+  }
+  .toPrint {
+    display: block;
+  }
+}

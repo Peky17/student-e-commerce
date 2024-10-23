@@ -1,0 +1,117 @@
+<div class="toPrint">
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        Fecha del comprobante:
+        <strong>{{ formatFecha(fechaActual) }}</strong>
+        <span class="float-right"></span>
+      </div>
+      <div class="card-body">
+        <div class="row mb-4">
+          <div class="col-sm-5">
+            <h6 class="mb-3">De:</h6>
+            <div>
+              <strong>TicketMaster SA de CV</strong>
+            </div>
+            <div>Madalinskiego 8</div>
+            <div>71-101 Szczecin, Poland</div>
+            <div>Email: info@webz.com.pl</div>
+            <div>Phone: +48 444 666 3333</div>
+          </div>
+
+          <div class="col-sm-5">
+            <h6 class="mb-3">Para:</h6>
+            <div>
+              <strong>{{ username }}</strong>
+            </div>
+            <div>Guadalajara Jalisco, México</div>
+            <div>ID: {{ id_usuario }}</div>
+            <div>{{ emision }}</div>
+          </div>
+
+          <div class="col-sm-2">
+            <img class="qrCode" src="assets/qr.png" />
+          </div>
+        </div>
+        <div class="table-responsive-sm">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th class="center">#</th>
+                <th>Item</th>
+                <th>Asientos</th>
+
+                <th class="right">Costo unitario</th>
+                <th class="center">Cantidad</th>
+                <th class="right">Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="center">1</td>
+                <td class="left strong">{{ name }}</td>
+                <td class="left">
+                  <ul>
+                    <li *ngFor="let seat of formatedSeats">
+                      {{ seat[0] }} - {{ seat[1] }}
+                    </li>
+                  </ul>
+                </td>
+
+                <td class="right">{{ precio | currency : "MXN" }}</td>
+                <td class="center">{{ qtySeats }}</td>
+                <td class="right">
+                  {{ precio * qtySeats | currency : "MXN" }}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-sm-5"></div>
+
+          <div class="col-lg-4 col-sm-5 ml-auto">
+            <table class="table table-clear">
+              <tbody>
+                <tr>
+                  <td class="left">
+                    <strong>Cine</strong>
+                  </td>
+                  <td class="right">{{ cineName }}</td>
+                </tr>
+                <tr>
+                  <td class="left">
+                    <strong>Total</strong>
+                  </td>
+                  <td class="right">
+                    <strong>{{ precio * qtySeats | currency : "MXN" }}</strong>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-auto">
+      <div class="btn-group">
+        <button type="button" class="btn btn-primary" (click)="previous()">
+          <i class="fa fa-arrow-left"></i> Anterior
+          <i class="fa fa-check-circle-o"></i>
+        </button>
+        <button type="button" class="btn btn-secondary" (click)="print()">
+          Imprimir <i class="fa fa-print" style="margin: 4px"></i>
+        </button>
+        <button type="button" class="btn btn-success" (click)="next()">
+          Reservar entradas
+          <i class="fa fa-credit-card" style="margin: 4px"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+<div class="container">
+  <h2>¿Para qué cine desea reservar boletos?</h2>
+  <br />
+
+  <div class="card-deck">
+    <div class="row">
+      <div class="col-md-4" *ngFor="let cine of cines; let i = index">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">{{ cine.nombre }}</h5>
+            <p class="card-text">Horario: {{ cine.horario }}</p>
+          </div>
+          <div class="card-footer">
+            <a
+              [routerLink]="['/cines/reservar', cine._id]"
+              class="btn btn-primary"
+            >
+              Reservar boletos <i class="fa fa-ticket" style="margin: 5px"></i>
+            </a>
+          </div>
+        </div>
+        <!-- Cerrar fila y abrir una nueva si es el tercer elemento de la fila o si es el último elemento -->
+        <div
+          *ngIf="(i + 1) % 3 === 0 || i === cines!.length - 1"
+          class="w-100 d-none d-md-block"
+        ></div>
+        <!-- Agregar un salto de línea después de cada fila de tres elementos -->
+        <br *ngIf="(i + 1) % 3 === 0 && i !== cines!.length - 1" />
+      </div>
+    </div>
+  </div>
+</div>

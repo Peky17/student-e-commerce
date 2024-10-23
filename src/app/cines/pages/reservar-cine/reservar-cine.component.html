@@ -1,0 +1,85 @@
+<div id="stepper1" class="bs-stepper">
+  <div class="bs-stepper-header" role="tablist">
+    <!-- your steps here -->
+    <div class="step" data-target="#information-part">
+      <button
+        type="button"
+        class="step-trigger"
+        role="tab"
+        aria-controls="information-part"
+        id="information-part-trigger"
+      >
+        <span class="bs-stepper-circle">1</span>
+        <span class="bs-stepper-label">Seleccionar asientos</span>
+      </button>
+    </div>
+    <div class="line"></div>
+    <div class="step" data-target="#confirm-part">
+      <button
+        type="button"
+        class="step-trigger"
+        role="tab"
+        aria-controls="confirm-part"
+        id="confirm-part-trigger"
+      >
+        <span class="bs-stepper-circle">2</span>
+        <span class="bs-stepper-label">Confirmar datos</span>
+      </button>
+    </div>
+    <div class="line"></div>
+    <div class="step" data-target="#payment-part">
+      <button
+        type="button"
+        class="step-trigger"
+        role="tab"
+        aria-controls="payment-part"
+        id="payment-part-trigger"
+      >
+        <span class="bs-stepper-circle">3</span>
+        <span class="bs-stepper-label">Pagar boletos</span>
+      </button>
+    </div>
+  </div>
+  <div class="bs-stepper-content">
+    <!-- Seleccionar función -->
+    <div
+      id="information-part"
+      class="content"
+      role="tabpanel"
+      aria-labelledby="information-part-trigger"
+    >
+      <div class="row">
+        <app-select-asientos></app-select-asientos>
+      </div>
+      <br />
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-auto">
+            <button type="button" class="btn btn-primary" (click)="next()">
+              Siguiente <i class="fa fa-arrow-right"></i>
+              <i class="fa fa-check-circle-o" style="margin: 6px"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- confirmar boletos -->
+    <div
+      id="confirm-part"
+      class="content"
+      role="tabpanel"
+      aria-labelledby="payment-part-trigger"
+    >
+      <app-cine-invoice></app-cine-invoice>
+    </div>
+    <!-- Pagar entradas -->
+    <div
+      id="payment-part"
+      class="content"
+      role="tabpanel"
+      aria-labelledby="payment-part-trigger"
+    >
+      <app-cine-payement-card></app-cine-payement-card>
+    </div>
+  </div>
+</div>
