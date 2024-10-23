@@ -8,7 +8,6 @@ import { DeleteModalComponent } from './pages/main-task/modals/delete-modal/dele
 import { UpdateModalComponent } from './pages/main-task/modals/update-modal/update-modal.component';
 import { AddModalComponent } from './pages/main-task/modals/add-modal/add-modal.component';
 import { SharedModule } from '../shared/shared.module';
-
 @NgModule({
   declarations: [
     MainTaskComponent,

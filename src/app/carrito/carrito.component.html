@@ -1,0 +1,66 @@
+<app-navbar></app-navbar>
+<router-outlet></router-outlet>
+<!-- CARRITO -->
+<div class="container cart-container">
+  <div class="card cart-card">
+    <!-- Header del carrito -->
+    <div class="cart-header">
+      <img
+        src="assets/carrito.png"
+        alt="Carrito de compras"
+        style="width: 50px; vertical-align: middle"
+      />
+      Tu Carrito
+    </div>
+
+    <!-- Producto 1 -->
+    <div class="cart-item">
+      <img
+        src="assets/pridycto 1.png"
+        class="img-fluid"
+        alt="Producto 1"
+      />
+      <div class="cart-item-details">
+        <h5>Producto 1</h5>
+        <p>Deliciosa comida con ingredientes frescos.</p>
+      </div>
+      <div class="cart-item-controls">
+        <button>-</button>
+        <span>1</span>
+        <!-- Cantidad del producto -->
+        <button>+</button>
+        <button style="background-color: red">X</button>
+        <!-- Eliminar producto -->
+      </div>
+      <div class="cart-item-price">$120</div>
+    </div>
+
+    <!-- Producto 2 -->
+    <div class="cart-item">
+      <img
+        src="assets/producto 2.png"
+        class="img-fluid"
+        alt="Producto 2"
+      />
+      <div class="cart-item-details">
+        <h5>Producto 2</h5>
+        <p>Un platillo especial para gourmets.</p>
+      </div>
+      <div class="cart-item-controls">
+        <button>-</button>
+        <span>2</span>
+        <!-- Cantidad del producto -->
+        <button>+</button>
+        <button style="background-color: red">X</button>
+        <!-- Eliminar producto -->
+      </div>
+      <div class="cart-item-price">$150</div>
+    </div>
+
+    <!-- Total y botón de checkout -->
+    <div class="cart-total-section">
+      <span>Total: $270</span>
+      <button class="checkout-btn">Proceder al pago</button>
+    </div>
+  </div>
+</div>

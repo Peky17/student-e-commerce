@@ -1,47 +1,51 @@
 <!-- Navbar de la app -->
 <app-navbar></app-navbar><br />
-<div class="container">
-  <h2>¿Qué desea reservar?</h2>
-  <br />
-  <!-- Cards de seleccion (menú) -->
+
+<!-- Sección de Productos -->
+<div class="container-fluid mt-4">
   <div class="row">
-    <div class="card" style="width: 18rem">
-      <img src="assets/teatro.jpg" class="card-img-top" alt="..." />
-      <div class="card-body">
-        <h5 class="card-title">Teatros</h5>
-        <p class="card-text">
-          Teatros disponibles en la ciudad de Guadalajara.
-        </p>
-      </div>
-      <div class="card-footer">
-        <a routerLink="/teatros/" class="btn btn-primary" style="width: 100%"
-          >Ver teatros disponibles <i class="fa fa-eye" style="margin: 3px"></i
-        ></a>
+    <!-- Producto 1 -->
+    <div class="col-md-4">
+      <div class="card product-card">
+        <img src="assets/productoo.png" alt="Producto 1" />
+        <div class="product-info">
+          <h5 class="card-title">Ensalada con crotones</h5>
+          <p class="product-price">$100</p>
+          <button class="add-to-cart-btn">Agregar al carrito</button>
+          <button class="add-to-cart-btn mt-2">Comprar ahora</button>
+        </div>
       </div>
     </div>
-    <div class="card" style="width: 18rem">
-      <img src="assets/cine.jpg" class="card-img-top" alt="..." />
-      <div class="card-body">
-        <h5 class="card-title">Cines</h5>
-        <p class="card-text">Cines disponibles en la ciudad de Guadalajara.</p>
-      </div>
-      <div class="card-footer">
-        <a routerLink="/cines/" class="btn btn-primary" style="width: 100%"
-          >Ver cines disponibles <i class="fa fa-eye" style="margin: 3px"></i
-        ></a>
+
+    <!-- Producto 2 -->
+    <div class="col-md-4">
+      <div class="card product-card">
+        <img src="assets/prductoo2.png" alt="Producto 2" />
+        <div class="product-info">
+          <h5 class="card-title">Te</h5>
+          <p class="product-price">$120</p>
+          <button class="add-to-cart-btn">Agregar al carrito</button>
+          <button class="add-to-cart-btn mt-2">Comprar ahora</button>
+        </div>
       </div>
     </div>
-    <div class="card" style="width: 18rem">
-      <img src="assets/museo.jpg" class="card-img-top" alt="..." />
-      <div class="card-body">
-        <h5 class="card-title">Museos</h5>
-        <p class="card-text">Museos disponibles en la ciudad de Guadalajara.</p>
-      </div>
-      <div class="card-footer">
-        <a routerLink="/museos/" class="btn btn-primary" style="width: 100%"
-          >Ver museos disponibles <i class="fa fa-eye" style="margin: 3px"></i
-        ></a>
+
+    <!-- Producto 3 -->
+    <div class="col-md-4">
+      <div class="card product-card">
+        <img src="assets/productoo3.png" alt="Producto 3" />
+        <div class="product-info">
+          <h5 class="card-title">Lonche de pierna</h5>
+          <p class="product-price">$90</p>
+          <button class="add-to-cart-btn">Agregar al carrito</button>
+          <button class="add-to-cart-btn mt-2">Comprar ahora</button>
+        </div>
       </div>
     </div>
   </div>
 </div>
+
+<!-- CDN de Bootstrap JS y dependencias (jQuery y Popper.js) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

@@ -1,0 +1,89 @@
+body {
+  background-color: #f8f9fa; /* Color de fondo para la página */
+}
+
+.profile-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-header h2 {
+  font-size: 36px;
+  color: #343a40;
+}
+
+.profile-header p {
+  font-size: 18px;
+  color: #6c757d;
+}
+
+.profile-info {
+  margin-bottom: 20px;
+}
+
+.profile-info h4 {
+  font-size: 24px;
+  color: #343a40;
+}
+
+.profile-info p {
+  font-size: 18px;
+  color: #6c757d;
+}
+
+.edit-profile-btn,
+.logout-btn {
+  background-color: #ff9900;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+  width: 100%; /* Hacer el botón ocupando el ancho completo */
+  margin-top: 10px; /* Espacio entre botones */
+}
+
+.edit-profile-btn:hover,
+.logout-btn:hover {
+  background-color: #e68a00;
+}
+
+.profile-image {
+  max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+  border-radius: 10px; /* Bordes redondeados para la imagen */
+  margin-bottom: 20px; /* Espacio inferior para separación */
+}
+
+.payment-methods {
+  margin-top: 30px; /* Espacio superior para separar secciones */
+}
+
+.payment-methods h4 {
+  font-size: 24px;
+  color: #343a40;
+  margin-bottom: 10px; /* Espacio inferior */
+}
+
+.payment-method {
+  border: 1px solid #6c757d;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 10px; /* Espacio inferior entre métodos */
+  background-color: #e9ecef; /* Fondo claro para los métodos de pago */
+}
+
+.payment-method p {
+  margin: 0; /* Eliminar margen para un mejor alineamiento */
+  color: #343a40;
+}

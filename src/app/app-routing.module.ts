@@ -14,6 +14,20 @@ const routes: Routes = [
     canLoad: [AuthGuard],
   },
   {
+    path: 'carrito',
+    loadChildren: () =>
+      import('./carrito/carrito.module').then((m) => m.CarritoModule),
+    canActivate: [AuthGuard],
+    canLoad: [AuthGuard],
+  },
+  {
+    path: 'profile',
+    loadChildren: () =>
+      import('./profile/profile.module').then((m) => m.ProfileModule),
+    canActivate: [AuthGuard],
+    canLoad: [AuthGuard],
+  },
+  {
     path: '**',
     redirectTo: 'auth',
   },
