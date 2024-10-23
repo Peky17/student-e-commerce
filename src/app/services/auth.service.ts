@@ -19,7 +19,7 @@ export class AuthService {
 
   login(data: any) {
     return this.httpClient
-      .post<any>(this.baseUrl + '/auth/login', data)
+      .post<any>(this.baseUrl + '/api/v1/auth/login', data)
       .pipe(
         tap((res) => {
           if (res.ok === true) {
