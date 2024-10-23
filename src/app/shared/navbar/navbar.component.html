@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
   <div class="container-fluid">
-    <a class="navbar-brand" routerLink="/task">Ticket Master</a>
+    <a class="navbar-brand" routerLink="/task">CuChef</a>
     <button
       class="navbar-toggler"
       type="button"
@@ -16,17 +16,39 @@
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
           <a class="nav-link" routerLink="/task/" routerLinkActive="active"
-            >Menú
+            >Productos disposnibles
             <span class="visually-hidden">(current)</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/reservaciones/" routerLinkActive="active"
-            >Mis reservaciones
+          <a class="nav-link" routerLink="/pagos/" routerLinkActive="active"
+            >Pagos
+            <span class="visually-hidden">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/carrito/" routerLinkActive="active"
+            >Carrito
+            <span class="visually-hidden">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/producto/" routerLinkActive="active"
+            >Producto
             <span class="visually-hidden">(current)</span>
           </a>
         </li>
       </ul>
+      <!-- Barra de búsqueda -->
+      <form class="d-flex" style="margin-right: 20px;">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Buscar producto"
+          aria-label="Buscar"
+        />
+        <button class="btn btn-outline-success" type="submit">Buscar</button>
+      </form>
       <button
         class="btn btn-secondary my-2 my-sm-0"
         type="button"

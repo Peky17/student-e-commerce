@@ -1,0 +1,115 @@
+<app-navbar></app-navbar>
+
+<div class="container payment-container">
+  <div class="payment-header">
+    <img src="assets/moneda_sin_fondo.png" alt="Confirmar Pago" />
+    <!-- Imagen añadida -->
+    Confirmar Pago
+  </div>
+
+  <!-- Métodos de pago -->
+  <div class="payment-method">
+    <h5 style="font-size: 24px">Seleccione un método de pago:</h5>
+
+    <!-- Opción de tarjeta -->
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="radio"
+        name="paymentOption"
+        id="cardPayment"
+        value="card"
+      />
+      <label class="form-check-label" for="cardPayment">
+        <img
+          src="assets/credito.png"
+          alt="Tarjeta"
+          class="payment-image"
+        />
+        Tarjeta de Crédito/Débito
+      </label>
+
+      <!-- Detalles de la tarjeta -->
+      <div id="cardDetails" style="margin-top: 20px">
+        <h5 style="font-size: 24px">Ingrese los detalles de su tarjeta:</h5>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Número de tarjeta"
+        />
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Nombre en la tarjeta"
+        />
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Fecha de expiración (MM/AA)"
+        />
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Código de seguridad (CVV)"
+        />
+      </div>
+    </div>
+
+    <!-- Opción de PayPal -->
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="radio"
+        name="paymentOption"
+        id="paypalPayment"
+        value="paypal"
+      />
+      <label class="form-check-label" for="paypalPayment">
+        <img src="assets/paypal.png" alt="PayPal" class="payment-image" />
+        PayPal
+      </label>
+
+      <!-- Detalles de PayPal -->
+      <div id="paypalDetails" style="margin-top: 20px">
+        <h5 style="font-size: 24px">Ingrese su cuenta de PayPal:</h5>
+        <input
+          type="email"
+          class="form-control"
+          placeholder="Correo electrónico de PayPal"
+        />
+      </div>
+    </div>
+
+    <!-- Opción de Efectivo -->
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="radio"
+        name="paymentOption"
+        id="cashPayment"
+        value="cash"
+      />
+      <label class="form-check-label" for="cashPayment">
+        <img
+          src="assets/efectivo .png"
+          alt="Efectivo"
+          class="payment-image"
+        />
+        Pago en Efectivo
+      </label>
+
+      <!-- Detalles del efectivo -->
+      <div id="cashDetails" style="margin-top: 20px">
+        <h5 style="font-size: 24px">
+          Pagará en efectivo al recibir el pedido.
+        </h5>
+        <p style="font-size: 18px">
+          Por favor, tenga el monto exacto para facilitar la transacción.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Botón final para confirmar el pago -->
+  <button class="confirm-btn">Procesar Pago</button>
+</div>

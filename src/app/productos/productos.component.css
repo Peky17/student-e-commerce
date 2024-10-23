@@ -1,0 +1,56 @@
+.product-container {
+  background-color: #f8f9fa;
+  padding: 20px; /* Ajustar el padding para dispositivos pequeños */
+}
+
+.product-card {
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-price {
+  font-size: 28px; /* Ajustar el tamaño de fuente para que sea más legible en pantallas pequeñas */
+  font-weight: bold;
+  color: #ff9900;
+  margin-bottom: 20px; /* Reducir el margen */
+}
+
+.add-to-cart-btn,
+.buy-now-btn {
+  background-color: #ff9900;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 15px 25px; /* Ajustar el padding para dispositivos pequeños */
+  font-size: 16px; /* Ajustar el tamaño de fuente para que sea más legible en pantallas pequeñas */
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+  width: 100%; /* Hacer el botón ocupando el ancho completo */
+  margin-bottom: 10px; /* Espacio entre botones */
+}
+
+.add-to-cart-btn:hover,
+.buy-now-btn:hover {
+  background-color: #e68a00;
+}
+
+@media (max-width: 768px) {
+  .product-price {
+    font-size: 24px; /* Reducir el tamaño en pantallas más pequeñas */
+  }
+
+  .add-to-cart-btn,
+  .buy-now-btn {
+    font-size: 14px; /* Reducir el tamaño del texto del botón en pantallas más pequeñas */
+  }
+}

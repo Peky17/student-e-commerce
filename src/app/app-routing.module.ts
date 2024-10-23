@@ -28,6 +28,20 @@ const routes: Routes = [
     canLoad: [AuthGuard],
   },
   {
+    path: 'producto',
+    loadChildren: () =>
+      import('./productos/productos.module').then((m) => m.ProductosModule),
+    canActivate: [AuthGuard],
+    canLoad: [AuthGuard],
+  },
+  {
+    path: 'pagos',
+    loadChildren: () =>
+      import('./pagos/pagos.module').then((m) => m.PagosModule),
+    canActivate: [AuthGuard],
+    canLoad: [AuthGuard],
+  },
+  {
     path: '**',
     redirectTo: 'auth',
   },
